@@ -18,7 +18,7 @@ default: &default
   # For details on connection pooling, see Rails configuration guide
   # https://guides.rubyonrails.org/configuring.html#database-pooling
   max_connections: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  url: postgresql://store_db_19wd_user:QqJVWFVjp76bkYqyjVjt77jWcYmj7Ehr@dpg-dajjc4fqj5pc73drt8qg-a/store_db_19wd
+  url: <%= ENV["DATABASE_URL"] %>
 
 
 development:

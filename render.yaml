@@ -6,7 +6,7 @@ services:
     buildCommand: './bin/render-build.sh'
     startCommand: './bin/rails server'
     envVars:
-      - key: postgresql://store_db_19wd_user:QqJVWFVjp76bkYqyjVjt77jWcYmj7Ehr@dpg-dajjc4fqj5pc73drt8qg-a/store_db_19wd
+      - key: DATABASE_URL
         fromDatabase:
           name: store-db
           property: connectionString
